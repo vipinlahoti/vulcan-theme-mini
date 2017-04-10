@@ -1,0 +1,27 @@
+.section-components {
+  padding: 0;
+  overflow: hidden;
+
+  .row {
+    display: flex;
+    align-items: center;
+  }
+
+  .image-container {
+    height: 590px;
+    position: relative;
+
+    img {
+      width: auto;
+      left: 0;
+      top: 0;
+      height: 100%;
+      position: absolute;
+    }
+  }
+
+  .image-container-left img {
+    left: auto;
+    right: 0;
+  }
+}

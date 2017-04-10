@@ -1,0 +1,88 @@
+.btn, button {
+  border: $button-border;
+  display: inline-block;
+  height: $button-height;
+  line-height: $button-height;
+  outline: 0;
+  margin: 0 $padding-base / 5;
+  padding: 0 $padding-base * 1.5;
+  font-size: $button-font-size;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: .2s ease-out;
+  cursor: pointer;
+  vertical-align: middle;
+  // Gets rid of tap active state
+  -webkit-tap-highlight-color: transparent;
+}
+
+// Disabled shared style
+button.disabled,
+.btn.disabled,
+.btn:disabled,
+.btn[disabled],
+.btn-large.disabled,
+.btn-large:disabled,
+.btn-large[disabled] {
+  background-color: $button-disabled-background !important;
+  box-shadow: none;
+  color: $button-disabled-color !important;
+  cursor: default;
+
+  * {
+    pointer-events: none;
+  }
+
+  &:hover {
+    background-color: $button-disabled-background !important;
+    color: $button-disabled-color !important;
+  }
+}
+
+// Shared icon styles
+button, .btn, .btn-large {
+  i {
+    float: left;
+    font-size: $button-font-size;
+    line-height: inherit;
+    margin-right: $padding-base / 3;
+  }
+}
+
+// Raised Button
+button, .btn {
+  
+}
+
+// Large button
+.btn-large {
+  @extend .btn;
+  height: $button-large-height;
+  line-height: $button-large-height;
+
+  i {
+    font-size: $button-large-icon-font-size;
+  }
+}
+
+// Small button
+.btn-sm {
+  font-size: 1rem;
+  height: inherit;
+  line-height: inherit;
+  padding: $padding-base / 3 $padding-base;
+
+  i {
+    font-size: inherit;
+  }
+}
+
+.btn-signup {
+  margin-left: $padding-base / 1.5;
+}
+
+
+.btn-primary {
+  background: $primary-color;
+}

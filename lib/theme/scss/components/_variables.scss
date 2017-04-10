@@ -1,0 +1,73 @@
+// Variables
+
+/* 1. Colors
+   ========================================================================== */
+$primary-color:       #2979FF !default;
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark:  darken($primary-color, 15%) !default;
+
+$secondary-color:     #26a69a !default;
+$success-color:       #4CAF50 !default;
+$error-color:         #F44336 !default;
+$link-color:          #039be5 !default;
+
+$gray:                #757575 !default;
+$gray-light:          #eaeaea !default;
+$rose-color:          #e91e63 !default;
+
+$white-color:         #FFFFFF !default;
+$black-color:         #3C4858 !default;
+
+
+/* 2. Fonts
+   ========================================================================== */
+$base-font-family:    "Roboto", sans-serif !default;
+$logo-font:           'Poppins', sans-serif !default;
+$heading-font-family: "Roboto Slab", "Times New Roman", serif;
+
+
+/* 3. Header Styles
+   ========================================================================== */
+$h1-fontsize: 3.2rem !default;
+$h2-fontsize: 2.92rem !default;
+$h3-fontsize: 2.28rem !default;
+$h4-fontsize: 1.92rem !default;
+$h5-fontsize: 1.35rem !default;
+$h6-fontsize: 1rem !default;
+
+
+/* 3. Spacings
+   ========================================================================== */
+$padding-base: 1rem;
+
+
+/* 3. Nav Bar
+   ========================================================================== */
+$navbar-shadow:           0 10px 20px 0 rgba(0, 0, 0, 0.1) !default;
+$navbar-height:           50px !default;
+$navbar-font-size:        1rem !default;
+$navbar-brand-font-size:  2.1rem !default;
+
+
+/* 4. Borders
+   ========================================================================== */
+$border-base:     10px;
+$border-small:    3px;
+$border-round:    30px;
+$border-circle:   50%;
+
+
+/* 3. Buttons
+   ========================================================================== */
+$button-border: none !default;
+$button-background-focus: lighten($secondary-color, 4%) !default;
+$button-font-size: 1rem !default;
+$button-height: 42px !default;
+
+// Disabled styles
+$button-disabled-background: #DFDFDF !default;
+$button-disabled-color: #9F9F9F !default;
+
+// Large buttons
+$button-large-icon-font-size: 1.6rem !default;
+$button-large-height: $button-height * 1.5 !default;

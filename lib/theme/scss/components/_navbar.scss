@@ -1,0 +1,40 @@
+nav {
+
+  a { 
+    height: $navbar-height;
+    line-height: $navbar-height;
+    font-size: 1rem;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  &.navbar {
+    border: 0;
+    background: transparent;
+    margin: 0;
+    padding: $padding-base 0;
+    box-shadow: $navbar-shadow;
+    position: relative;
+    z-index: 99;
+  }
+
+  .navbar-brand {
+    padding: 0;
+  }
+
+  // Logo
+  .brand-logo {
+    color: $black-color;
+    display: inline-block;
+    font-family: $logo-font;
+    font-size: $navbar-brand-font-size;
+    padding: 0;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

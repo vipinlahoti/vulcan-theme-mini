@@ -1,0 +1,30 @@
+.jumbotron {
+  background-size: cover;
+  height: 75vh;
+  position: relative;
+
+  p {
+    font-size: $h6-fontsize;
+  }
+
+  .container {
+    z-index: 2;
+    position: relative;
+    color: $white-color;
+  }
+
+  &:before, &:after {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+    content: "";
+  }
+
+  &:before {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
