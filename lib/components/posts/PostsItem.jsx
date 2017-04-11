@@ -4,12 +4,12 @@ import { FormattedMessage, FormattedRelative } from 'react-intl';
 import { Link } from 'react-router';
 import Posts from "meteor/vulcan:posts";
 
-class grPostsItem extends getRawComponent('PostsItem') {
+class BootPostsItem extends getRawComponent('PostsItem') {
 
   renderActions() {
     return (
-      <div className="stats article-admin">
-        <ModalTrigger title="Edit Post" component={<a className="btn btn-flat btn-sm waves-effect waves-dark"><Components.Icon name="mode_edit" /> <FormattedMessage id="posts.edit"/></a>}>
+      <div className="stats card-admin">
+        <ModalTrigger title="Edit Post" component={<a className="btn btn-sm"><Components.Icon name="mode_edit" /> <FormattedMessage id="posts.edit"/></a>}>
           <Components.PostsEditForm post={this.props.post} />
         </ModalTrigger>
       </div>
@@ -26,34 +26,33 @@ class grPostsItem extends getRawComponent('PostsItem') {
     return (
       <div className={postClass}>
         <div className="card-content">
-
-        <div className="article-thumbnail">
+          
           {post.thumbnailUrl ?
             <div className="card-image">
               <Components.PostsThumbnail post={post}/>
             </div>
           : null}
-        </div>
 
           <h3 className="card-title">
             <Link to={Posts.getLink(post)} target={Posts.getLinkTarget(post)}>
               {post.title}
             </Link>
+            {this.renderCategories()}
           </h3>
 
-          <div className="article-excerpt">
+          <div className="card-excerpt">
             {post.excerpt}
           </div>
 
           <div className="card-footer">
-            {post.user? <div className="author">by Dr. <strong><Components.UsersName user={post.user}/></strong>, &nbsp;</div> : null}
+            {post.user? <div className="author">by <strong><Components.UsersName user={post.user}/></strong>, &nbsp;</div> : null}
             <div className="author">
-              <span className="article-time">
+              <span className="card-time">
                 <FormattedRelative value={post.postedAt}/>
               </span>
             </div>
             <div className="stats">
-              <Link className="btn btn-flat btn-sm waves-effect waves-dark" to={Posts.getPageUrl(post)}>
+              <Link className="btn btn-sm" to={Posts.getPageUrl(post)}>
                 <Components.Icon name="comment" />
                 {post.commentCount}
               </Link>
@@ -73,4 +72,4 @@ class grPostsItem extends getRawComponent('PostsItem') {
   }
 }
 
-replaceComponent('PostsItem', grPostsItem);
+replaceComponent('PostsItem', BootPostsItem);

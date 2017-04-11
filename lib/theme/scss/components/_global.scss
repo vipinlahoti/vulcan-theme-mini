@@ -1,5 +1,97 @@
-.section-components {
+:focus {
+  outline: none;
+  border: 0;
+}
+
+html {
+ box-sizing: border-box;
+}
+
+*, *:before, *:after {
+ box-sizing: inherit;
+}
+
+body {
+  color: $black-color;
+  margin: 0;
+}
+
+
+ul, nav {
+  &.browser-default,
+  &.browser-default li {
+    list-style-type: initial;
+  }
+
   padding: 0;
+  list-style-type: none;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+a {
+  color: $primary-color;
+  cursor: pointer;
+  text-decoration: none;
+
+  // Gets rid of tap active state
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Footer
+.footer {
+  padding: $padding-base * 2;
+
+  .copyright {
+    overflow: hidden;
+    line-height: 50px;
+    color: $black-color;
+
+    a {
+      color: $black-color;
+    }
+  }
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.footer {
+  position: relative;
+  z-index: 2;
+  padding: $padding-base * 2 0
+}
+
+.section {
+  padding: $padding-base * 4 0;
+  width: 100%;
+}
+
+.section-half {
+  padding: $padding-base * 2 0;
+}
+
+.section-quarter {
+  padding: $padding-base / 1.5 0;
+}
+
+.section-components-sm {
+  padding: 0 0 $padding-base / 1.5;
+}
+
+.section-components {
+  padding: 0 0 $padding-base * 5;
   overflow: hidden;
 
   .row {
@@ -23,5 +115,25 @@
   .image-container-left img {
     left: auto;
     right: 0;
+  }
+}
+
+.sidebar {
+  .dropdown {
+    margin: $padding-base 0;
+    width: 100%;
+
+    .btn-default {
+      width: 100%;
+      text-align: left;
+      padding: 0 1rem;
+      background-color: $gray-light;
+      border-color: #adadad;
+
+      .caret {
+        float: right;
+        margin: $padding-base 0;
+      }
+    }
   }
 }

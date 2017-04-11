@@ -33,39 +33,41 @@ class grPostsPage extends getRawComponent('PostsPage') {
         <div>
 
           <Components.HeadTags url={Posts.getPageUrl(post)} title={post.title} image={post.thumbnailUrl} description={post.excerpt} />
-          
-          <Jumbotron style={ headerBg }>
+
+          <div className="main">
             <Grid>
               <Row>
-                <Col md={8}>
-                  <h1 className="title">{post.title}</h1>
-                  <h5>
-                    {post.user ? <div className="author">by Dr. <strong><Components.UsersName user={post.user}/></strong>, &nbsp;</div> : null}
-                    { post.postedAt ? <FormattedRelative value={post.postedAt}/> : <FormattedMessage id="posts.dateNotDefined"/> }
-                  </h5>
-                </Col>
-              </Row>
-            </Grid>
-          </Jumbotron>
-
-          <div className="main z-depth-2">
-            <Grid>
-              <Row>
-                <Col md={8} mdOffset={2}>
-
-                  {post.thumbnailUrl ?
-                  <div className="card card-single no-margin no-padding">
-                    <div className="card-image">
-                      <Components.PostsThumbnail post={post}/>
+                <Col md={9}>
+                  <div className="post-page">
+                    <h3 className="title">{post.title}</h3>
+                    {post.user ? <span>by <strong><Components.UsersName user={post.user}/></strong>, &nbsp;</span> : null}
+                    <span className="card-time">
+                      <FormattedRelative value={post.postedAt}/>
+                    </span>
+                    {post.thumbnailUrl ?
+                    <div className="card card-single no-padding">
+                      <div className="card-image no-margin">
+                        <Components.PostsThumbnail post={post}/>
+                      </div>
                     </div>
-                  </div>
-                  : null}
+                    : null}
 
-                  {post.htmlBody ? <div className="section-components" dangerouslySetInnerHTML={htmlBody}></div> : null}
+                    <div className="text-center">
+                      
+                    </div>
+
+                    {post.htmlBody ? <div className="section-components" dangerouslySetInnerHTML={htmlBody}></div> : null}
+                  </div>
+                  <Components.PostsCommentsThread terms={{postId: post._id, view: 'postComments'}} />
+                </Col>
+
+                <Col md={3}>
+                  <div className="sidebar">
+                    <Components.PostsListHeader/>
+                    <Components.Newsletter />
+                  </div>
                 </Col>
               </Row>
-
-              <Components.PostsCommentsThread terms={{postId: post._id, view: 'postComments'}} />
             </Grid>
           </div>
 

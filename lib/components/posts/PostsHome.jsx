@@ -18,9 +18,16 @@ const BootPostsHome = (props, context) => {
               </div>
             </Col>
             <Col md={5} mdOffset={1}>
-              <h3 className="title">Basic Components</h3>
-              <p>We re-styled every Bootstrap element to make it resemble Material Design and also fit with each other. All the Bootstrap components that you need in a development have been re-design with the new look. Besides the numerous basic elements, we have also created additional classes. All these items will help you take your project to the next level.
-              </p>
+              <div className="card">
+                <h3 className="title">Basic Components</h3>
+                <div className="card-footer">
+                  <div className="author">
+                    by <a className="users-name" href="">johndoe</a>, <span className="article-time">5 days ago</span>
+                  </div>
+                </div>
+                <p>We re-styled every Bootstrap element to make it resemble Material Design and also fit with each other. All the Bootstrap components that you need in a development have been re-design with the new look. Besides the numerous basic elements, we have also created additional classes. All these items will help you take your project to the next level.
+                </p>
+              </div>
             </Col>
           </Row>
         </Grid>

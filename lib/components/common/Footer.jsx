@@ -7,8 +7,8 @@ const BootFooter = props => {
   return (
     <div className="footer">
       <Grid>
-        <div className="copyright center-align footer-module">
-            <a href="http://docs.vulcanjs.org" target="_blank"><FormattedMessage id="app.powered_by"/></a>          
+        <div className="text-center">
+          <a href="http://docs.vulcanjs.org" target="_blank"><FormattedMessage id="app.powered_by"/></a>          
         </div>
       </Grid>
     </div>

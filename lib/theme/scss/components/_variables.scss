@@ -3,7 +3,7 @@
 /* 1. Colors
    ========================================================================== */
 $primary-color:       #2979FF !default;
-$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-light: lighten($primary-color, 5%) !default;
 $primary-color-dark:  darken($primary-color, 15%) !default;
 
 $secondary-color:     #26a69a !default;
@@ -13,8 +13,7 @@ $link-color:          #039be5 !default;
 
 $gray:                #757575 !default;
 $gray-light:          #eaeaea !default;
-$rose-color:          #e91e63 !default;
-
+$gray-lighter:        #f9fafa !default
 $white-color:         #FFFFFF !default;
 $black-color:         #3C4858 !default;
 
@@ -71,3 +70,19 @@ $button-disabled-color: #9F9F9F !default;
 // Large buttons
 $button-large-icon-font-size: 1.6rem !default;
 $button-large-height: $button-height * 1.5 !default;
+
+
+/* 3. Card
+   ========================================================================== */
+$card-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1) !default;
+
+
+/* 10. Forms
+   ========================================================================== */
+$input-height:                2.65rem !default;
+$input-font-size:             1rem !default;
+$input-transition:            all .3s !default;
+$label-font-size:             .8rem !default;
+$input-disabled-color:        rgba(0,0,0, .26) !default;
+$input-disabled-solid-color:  #BDBDBD !default;
+$input-disabled-border:       1px dotted $input-disabled-color !default;

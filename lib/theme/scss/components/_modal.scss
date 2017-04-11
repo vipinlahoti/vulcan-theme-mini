@@ -1,0 +1,44 @@
+.modal-dialog {
+  margin-top: $padding-base * 7;
+  position: relative;
+}
+
+.modal-content {
+  position: relative;
+  border-radius: $border-base;
+}
+
+.modal-backdrop {
+  background-color: $black-color;
+}
+
+// Modal header
+// Top section of the modal w/ title and dismiss
+.modal-header {
+  background: $primary-color;
+  border-radius: $border-base $border-base 0 0;
+  padding: $padding-base $padding-base * 2;
+  margin-bottom: $padding-base * 2;
+}
+// Close icon
+.modal-header .close {
+  margin-top: -2px;
+  position: absolute;
+  background: transparent;
+  right: -6rem;
+  box-shadow: none;
+  font-size: 3rem;
+}
+
+// Title text within header
+.modal-title {
+  color: $white-color;
+  margin: 0;
+}
+
+// Modal body
+// Where all modal content resides (sibling of .modal-header and .modal-footer)
+.modal-body {
+  position: relative;
+  padding: $padding-base * 2.4;
+}

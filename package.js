@@ -2,7 +2,7 @@ Package.describe({
   name: "vulcan:boot",
   summary: "Vulcan Theme package",
   version: '0.1.0',
-  git: "https://github.com/TelescopeJS/Telescope.git"
+  git: "https://github.com/vipinlahoti/vulcan-boot.git"
 });
 
 Package.onUse( function(api) {

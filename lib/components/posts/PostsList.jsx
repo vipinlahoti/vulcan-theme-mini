@@ -7,7 +7,7 @@ import { Row, Col } from 'react-bootstrap';
 
 const Error = ({error}) => <Alert className="flash-message" bsStyle="danger">{error.message}</Alert>
 
-const grPostsList = (props) => {
+const BootPostsList = (props) => {
 
   const {results, loading, count, totalCount, loadMore, showHeader = true, networkStatus, currentUser, error, terms} = props;
   const loadingMore = networkStatus === 2;
@@ -18,7 +18,6 @@ const grPostsList = (props) => {
 
     return (
       <div>
-        {showHeader ? <Components.PostsViews /> : null}
         <Row>
           <Col md={9}>
             <div className="card-columns posts-list">
@@ -28,7 +27,10 @@ const grPostsList = (props) => {
             </div>
           </Col>
           <Col md={3}>
-            {showHeader ? <Components.CategoriesList /> : null}
+            <div className="sidebar">
+              {showHeader ? <Components.PostsListHeader/> : null}
+              <Components.Newsletter />
+            </div>
           </Col>
         </Row>
       </div>
@@ -36,7 +38,6 @@ const grPostsList = (props) => {
   } else if (loading) {
     return (
       <div>
-        {showHeader ? <Components.PostsViews /> : null}
         <Row>
           <Col md={9}>
             <div className="card-columns posts-list">
@@ -47,7 +48,10 @@ const grPostsList = (props) => {
             </div>
           </Col>
           <Col md={3}>
-            {showHeader ? <Components.CategoriesList /> : null}
+            <div className="sidebar">
+              {showHeader ? <Components.PostsListHeader/> : null}
+              <Components.Newsletter />
+            </div>
           </Col>
         </Row>
       </div>
@@ -55,7 +59,6 @@ const grPostsList = (props) => {
   } else {
     return (
       <div>
-        {showHeader ? <Components.PostsViews /> : null}
         <Row>
           <Col md={9}>
             <div className="card-columns posts-list">
@@ -66,7 +69,10 @@ const grPostsList = (props) => {
             </div>
           </Col>
           <Col md={3}>
-            {showHeader ? <Components.CategoriesList /> : null}
+            <div className="sidebar">
+              {showHeader ? <Components.PostsListHeader/> : null}
+              <Components.Newsletter />
+            </div>
           </Col>
         </Row>
       </div>
@@ -75,9 +81,9 @@ const grPostsList = (props) => {
   
 };
 
-grPostsList.displayName = "grPostsList";
+BootPostsList.displayName = "BootPostsList";
 
-grPostsList.propTypes = {
+BootPostsList.propTypes = {
   results: React.PropTypes.array,
   terms: React.PropTypes.object,
   hasMore: React.PropTypes.bool,
@@ -95,4 +101,4 @@ const options = {
   fragmentName: 'PostsList',
 };
 
-registerComponent('PostsList', grPostsList, withCurrentUser, [withList, options]);
+registerComponent('PostsList', BootPostsList, withCurrentUser, [withList, options]);
