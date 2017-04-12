@@ -52,9 +52,8 @@ class BootPostsItem extends getRawComponent('PostsItem') {
               </span>
             </div>
             <div className="stats">
-              <Link className="btn btn-sm" to={Posts.getPageUrl(post)}>
-                <Components.Icon name="comment" />
-                {post.commentCount}
+              <Link to={Posts.getPageUrl(post)} className="btn btn-sm">
+                <Components.Icon name="comment" /> {post.commentCount}
               </Link>
             </div>
             <div className="stats">

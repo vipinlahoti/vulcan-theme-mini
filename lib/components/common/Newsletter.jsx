@@ -7,6 +7,7 @@ import { Button } from 'react-bootstrap';
 
 
 class BootNewsletter extends getRawComponent('Newsletter') {
+
   renderButton() {
     return <Components.NewsletterButton
               label="newsletter.subscribe"
@@ -34,11 +35,9 @@ class BootNewsletter extends getRawComponent('Newsletter') {
 
   render() {
     return (
-      <div className="card newsletter-card">
-        <div className="card-content">
-          <h3 className="card-title"><FormattedMessage id="newsletter.title"/></h3>
-          {this.props.currentUser ? this.renderButton() : this.renderForm()}
-        </div>
+      <div className="newsletter-card">
+        <h3 className="card-title"><FormattedMessage id="newsletter.title"/></h3>
+        {this.props.currentUser ? this.renderButton() : this.renderForm()}
       </div>
     );
   }
