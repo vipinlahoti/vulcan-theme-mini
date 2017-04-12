@@ -10,6 +10,7 @@ class BootNewsletter extends getRawComponent('Newsletter') {
   renderButton() {
     return <Components.NewsletterButton
               label="newsletter.subscribe"
+              className="subscribe-btn"
               mutationName="addUserNewsletter"
               successCallback={() => this.successCallbackSubscription()}
               user={this.props.currentUser}

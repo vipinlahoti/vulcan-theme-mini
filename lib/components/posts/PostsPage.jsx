@@ -7,7 +7,7 @@ import { FormattedMessage, FormattedRelative } from 'react-intl';
 import { Grid, Row, Col, Jumbotron } from 'react-bootstrap';
 
 
-class grPostsPage extends getRawComponent('PostsPage') {
+class BootPostsPage extends getRawComponent('PostsPage') {
 
   render() {
     if (this.props.loading) {
@@ -56,7 +56,7 @@ class grPostsPage extends getRawComponent('PostsPage') {
                       
                     </div>
 
-                    {post.htmlBody ? <div className="section-components" dangerouslySetInnerHTML={htmlBody}></div> : null}
+                    {post.htmlBody ? <div className="section-components-sm" dangerouslySetInnerHTML={htmlBody}></div> : null}
                   </div>
                   <Components.PostsCommentsThread terms={{postId: post._id, view: 'postComments'}} />
                 </Col>
@@ -78,4 +78,4 @@ class grPostsPage extends getRawComponent('PostsPage') {
   }
 }
 
-replaceComponent('PostsPage', grPostsPage);
+replaceComponent('PostsPage', BootPostsPage);

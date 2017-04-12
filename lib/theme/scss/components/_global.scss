@@ -44,6 +44,10 @@ a {
   }
 }
 
+.main {
+  padding: $padding-base * 2 0 $padding-base / 2;
+}
+
 // Footer
 .footer {
   padding: $padding-base * 2;
@@ -94,13 +98,8 @@ a {
   padding: 0 0 $padding-base * 5;
   overflow: hidden;
 
-  .row {
-    display: flex;
-    align-items: center;
-  }
-
   .image-container {
-    height: 590px;
+    height: 600px;
     position: relative;
 
     img {
@@ -116,11 +115,17 @@ a {
     left: auto;
     right: 0;
   }
+
+  &.jumbotron {
+    .container {
+      padding: 0;
+    }
+  }
 }
 
 .sidebar {
   .dropdown {
-    margin: $padding-base 0;
+    margin: 0 0 $padding-base;
     width: 100%;
 
     .btn-default {
@@ -132,7 +137,7 @@ a {
 
       .caret {
         float: right;
-        margin: $padding-base 0;
+        margin: $padding-base * 1.2 0;
       }
     }
   }

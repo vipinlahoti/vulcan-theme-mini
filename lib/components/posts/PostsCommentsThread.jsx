@@ -5,7 +5,7 @@ import Comments from 'meteor/vulcan:comments';
 import { Row, Col } from 'react-bootstrap';
 
 
-const grPostsCommentsThread = (props, context) => {
+const BootPostsCommentsThread = (props, context) => {
 
   const {loading, terms: { postId }, results, totalCount} = props;
   
@@ -21,10 +21,10 @@ const grPostsCommentsThread = (props, context) => {
     return (
       <div className="section-comments">
         <Row>
-          <Col md={8} mdOffset={2}>
+          <Col md={12}>
             <div className="media-area">
               {!!props.currentUser ?
-              <div className="section-components">
+              <div className="section">
                 <h4 className="title center-align"><FormattedMessage id="comments.new"/></h4>
                 <Components.CommentsNewForm
                   postId={postId} 
@@ -46,9 +46,9 @@ const grPostsCommentsThread = (props, context) => {
   }
 };
 
-grPostsCommentsThread.displayName = "grPostsCommentsThread";
+BootPostsCommentsThread.displayName = "BootPostsCommentsThread";
 
-grPostsCommentsThread.propTypes = {
+BootPostsCommentsThread.propTypes = {
   currentUser: React.PropTypes.object
 };
 
@@ -59,4 +59,4 @@ const options = {
   limit: 0,
 };
 
-replaceComponent('PostsCommentsThread', grPostsCommentsThread, [withList, options], withCurrentUser);
+replaceComponent('PostsCommentsThread', BootPostsCommentsThread, [withList, options], withCurrentUser);

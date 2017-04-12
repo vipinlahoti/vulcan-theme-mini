@@ -18,9 +18,13 @@ const BootHeader = (props, context) => {
         </Navbar.Brand>
       </Navbar.Header>
       <Nav pullRight>
-        <Components.ModalTrigger size="small" component={button}>
-          <Components.AccountsLoginForm />
-        </Components.ModalTrigger>
+        {!!props.currentUser ?
+          <Components.UsersMenu/>
+        :
+          <Components.ModalTrigger size="small" component={button}>
+            <Components.AccountsLoginForm />
+          </Components.ModalTrigger>          
+        }
       </Nav>
     </Navbar>
   )

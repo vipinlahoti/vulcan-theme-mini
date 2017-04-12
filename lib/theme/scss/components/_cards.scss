@@ -5,6 +5,7 @@
 
 .card {
   background: $white-color;
+  border-radius: $border-small;
   box-shadow: $card-shadow;
   display: inline-block;
   position: relative;
@@ -12,20 +13,9 @@
   transition: box-shadow .25s;
   width: 100%;
 
-  .card-title {
-    font-size: $h5-fontsize;
-    font-weight: 500;
-    line-height: 1.5;
-    margin: 0;
-
-    a {
-      color: $black-color;
-    }
-  }
-
   .card-image {
     background: $white-color;
-    border-radius: $border-base;
+    border-radius: $border-small;
     margin-bottom: $padding-base;
     overflow: hidden;
 
@@ -45,7 +35,7 @@
   }
 
   .card-excerpt {
-    margin: $padding-base 0 $padding-base / 2;
+    margin: 0 0 $padding-base / 2;
     word-break: break-word;
   }
 
@@ -72,11 +62,27 @@
         padding: $padding-base / 4 $padding-base / 2;
       }
     }
+
+    .posts-stats-item {
+      margin: 0 $padding-base / 3;
+    }
   }
 
   &.newsletter-card {
     background: $primary-color;
     color: $white-color;
     margin: $padding-base 0;
+  }
+}
+
+
+.card-title {
+  font-size: $h5-fontsize;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: $padding-base / 2 0;
+
+  a {
+    color: $black-color;
   }
 }

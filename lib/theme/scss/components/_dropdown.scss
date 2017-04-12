@@ -1,0 +1,41 @@
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-menu {
+  padding: $padding-base / 2 0;
+  background-clip: padding-box;
+  border-radius: $border-small;
+
+  li {
+    color: $black-color;
+    display: block;
+    width: 100%;
+    clear: both;
+    text-align: inherit;
+    white-space: nowrap;
+
+    a {
+      color: $black-color;
+      display: block;
+      padding: 0 $padding-base;
+      font-weight: normal;
+      line-height: 42px;
+      height: 42px;
+      margin: 0 $padding-base / 3;
+      border-radius: $border-small;
+      transition: all 150ms linear;
+
+      &:hover, &:focus {
+        background: $gray-light;
+      }
+    }
+
+    &.active {
+      a {
+        background: $gray-light;
+      }
+    }
+  }
+}

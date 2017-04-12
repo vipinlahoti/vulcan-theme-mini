@@ -31,8 +31,8 @@ Package.onUse( function(api) {
     'fourseven:scss@4.5.0',
   ]);
 
-  api.mainModule('server.js', 'server');
-  api.mainModule('client.js', 'client');
+  api.mainModule('lib/server.js', 'server');
+  api.mainModule('lib/client.js', 'client');
 
   var packages = [
     'jquery'

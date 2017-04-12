@@ -2,7 +2,7 @@ import React, { PropTypes, Component } from 'react';
 import Helmet from 'react-helmet';
 import { replaceComponent, Utils, getSetting, Headtags } from 'meteor/vulcan:core';
 
-class grHeadTags extends Component {
+class BootHeadTags extends Component {
   render() {
 
     const url = !!this.props.url ? this.props.url : Utils.getSiteUrl();
@@ -57,11 +57,11 @@ class grHeadTags extends Component {
   }
 }
 
-grHeadTags.propTypes = {
+BootHeadTags.propTypes = {
   url: React.PropTypes.string,
   title: React.PropTypes.string,
   description: React.PropTypes.string,
   image: React.PropTypes.string,
 };
 
-replaceComponent('HeadTags', grHeadTags);
+replaceComponent('HeadTags', BootHeadTags);

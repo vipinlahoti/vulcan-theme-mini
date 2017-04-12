@@ -1,0 +1,55 @@
+.media-right,
+.media > .pull-right {
+  padding-left: $padding-base;
+}
+
+.media-left,
+.media > .pull-left {
+  padding-right: $padding-base;
+}
+
+.media-left,
+.media-right,
+.media-body {
+  word-break: break-all;
+}
+
+.media-middle {
+  vertical-align: middle;
+}
+
+.media-bottom {
+  vertical-align: bottom;
+}
+
+// Reset margins on headings for tighter default spacing
+.media-heading {
+  font-size: 1.2rem;
+  line-height: 1.55rem;
+
+  a {
+    color: $black-color;
+  }
+}
+
+// Media list variation
+//
+// Undo default ul/ol styles
+.media-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+
+.avatar {
+  border-radius: $border-circle;
+  box-shadow: $navbar-shadow;
+}
+
+.media-footer {
+  margin: 0 0 $padding-base * 2.5;
+}
+
+.media-children {
+  padding-left: $padding-base * 4;
+}

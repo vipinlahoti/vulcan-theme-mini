@@ -11,6 +11,7 @@
     z-index: 2;
     position: relative;
     color: $white-color;
+    padding-top: 25vh;
   }
 
   &:before, &:after {
@@ -31,5 +32,6 @@
   .card {
     background-color: transparent;
     box-shadow: none;
+    padding-top: 20vh;
   }
 }
