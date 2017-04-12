@@ -60,7 +60,6 @@ textarea {
 .newsletter-card {
   input[type=text] {
     padding-right: $padding-base * 3;
-    margin: $padding-base 0;
   }
 
   .newsletter-btn {
@@ -112,13 +111,34 @@ textarea {
     align-items: center;
     justify-content: space-between;
 
+    .btn-twitter, .btn-facebook, .btn-google {
+      font-size: 0;
+      padding: 0 $padding-base / 2;
+
+      &:after {
+        content: "\f099";
+        display: inline-block;
+        font-family: FontAwesome;
+        font-size: $h5-fontsize;
+        line-height: 2.65rem;
+      }
+    }
+
     .btn-facebook {
       background: #3b5998;
       border-color: #3b5998;
+
+      &:after {
+        content: "\f099";
+      }
     }
     .btn-google {
       background-color: #dd4b39;
       color: $white-color;
+
+      &:after {
+        content: "\f099";
+      }
     }
   }
   .message {

@@ -95,3 +95,11 @@ button, .btn {
     background: $primary-color-light;
   }
 }
+
+
+.btn-twitter:after {
+  text-indent: 9999;
+  content: "\f099";
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+}
