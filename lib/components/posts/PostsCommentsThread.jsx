@@ -31,7 +31,11 @@ const BootPostsCommentsThread = (props, context) => {
                   type="comment" 
                 />
               </div> :
-              null
+              <div>
+                <ModalTrigger size="small" component={<a><FormattedMessage id="comments.please_log_in"/></a>}>
+                  <Components.UsersAccountForm/>
+                </ModalTrigger>
+              </div>
               }
 
               <div className="section-components-sm">

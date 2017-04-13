@@ -16,7 +16,6 @@
   .card-image {
     background: $white-color;
     border-radius: $border-small;
-    margin-bottom: $padding-base;
     overflow: hidden;
 
     a {
@@ -35,18 +34,18 @@
   }
 
   .card-excerpt {
-    margin: 0 0 $padding-base / 2;
+    color: $gray;
+    margin: $padding-base 0;
     word-break: break-word;
   }
 
-  .card-footer {
+  .card-header, .card-footer {
+    color: $gray;
     margin: $padding-base / 2 0;
-    text-align: left;
-    padding: 0;
 
-    .author {
+    .author, .stats {
       display: inline-block;
-      line-height: 40px;
+      font-size: 14px;
     }
 
     a {
@@ -55,16 +54,35 @@
       font-weight: 500;
     }
 
+    .btn-sm {
+      padding: $padding-base / 6 $padding-base / 3;
+      font-size: 14px;
+      margin: 0 $padding-base / 4;
+    }
+  }
+
+  .card-footer {
+    color: inherit;
+
+    .author {
+      a {
+        float: left;
+        margin-right: $padding-base / 2;
+        line-height: 40px;
+      }
+    }
+
     .stats {
       float: right;
 
       .btn-sm {
         padding: $padding-base / 4 $padding-base / 2;
+        margin: 0;
       }
     }
 
     .posts-stats-item {
-      margin: 0 $padding-base / 3;
+      margin-right: $padding-base / 2;
     }
   }
 
@@ -73,16 +91,58 @@
     color: $white-color;
     margin: $padding-base 0;
   }
-}
 
+  &.card-sticky {
+    .sticky {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+      border-top: 60px solid $primary-color;
+      border-left: 60px solid transparent;
+
+      i {
+        position: absolute;
+        top: -45px;
+        right: 5px;
+        color: $white-color;
+      }
+    }
+  }
+}
 
 .card-title {
   font-size: $h5-fontsize;
   font-weight: 500;
   line-height: 1.5;
-  margin: $padding-base / 2 0;
+  margin: 0 0 $padding-base / 2;
 
   a {
     color: $black-color;
+  }
+}
+
+.card-admin {
+  display: inline-block;
+
+  .btn-sm {
+    margin-left: $padding-base;
+    color: $white-color;
+    font-size: 12px;
+    background: $black-color;
+    padding: $padding-base / 6 $padding-base / 2;
+  }
+}
+
+.posts-categories {
+  margin: $padding-base / 2 0;
+
+  .posts-category {
+    border: 1px solid;
+    padding: $padding-base / 6 $padding-base / 3;
+    border-radius: $border-small;
+    font-size: 12px;
+    margin-right: $padding-base / 2;
   }
 }

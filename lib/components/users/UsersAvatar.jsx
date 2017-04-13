@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 const BootUsersAvatar = ({user, size, link}) => {
 
   const sizes = {
-    small: "50px",
+    small: "40px",
     medium: "60px",
     large: "80px",
     xlarge: "120px",

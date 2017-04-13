@@ -8,8 +8,8 @@ class BootPostsItem extends getRawComponent('PostsItem') {
 
   renderActions() {
     return (
-      <div className="stats card-admin">
-        <ModalTrigger title="Edit Post" component={<a className="btn btn-sm"><Components.Icon name="mode_edit" /> <FormattedMessage id="posts.edit"/></a>}>
+      <div className="card-admin">
+        <ModalTrigger title="Edit Post" component={<a className="btn btn-sm"><Components.Icon name="edit" /> <FormattedMessage id="posts.edit"/></a>}>
           <Components.PostsEditForm post={this.props.post} />
         </ModalTrigger>
       </div>
@@ -25,47 +25,56 @@ class BootPostsItem extends getRawComponent('PostsItem') {
 
     return (
       <div className={postClass}>
-        <div className="card-content">
-          
-          {post.thumbnailUrl ?
-            <div className="card-image">
-              <Components.PostsThumbnail post={post}/>
-            </div>
-          : null}
-
-          <h3 className="card-title">
-            <Link to={Posts.getLink(post)} target={Posts.getLinkTarget(post)}>
-              {post.title}
-            </Link>
-            {this.renderCategories()}
-          </h3>
-
-          <div className="card-excerpt">
-            {post.excerpt}
+        
+        {post.sticky ?
+          <span className="sticky">
+            <Components.Icon name="sticky" />
+          </span>
+        : null }
+        
+        {post.thumbnailUrl ?
+          <div className="card-image">
+            <Components.PostsThumbnail post={post}/>
           </div>
+        : null}
 
-          <div className="card-footer">
-            {post.user? <div className="author">by <strong><Components.UsersName user={post.user}/></strong>, &nbsp;</div> : null}
+        <div className="card-content">
+
+          <div className="card-header">
             <div className="author">
               <span className="card-time">
-                <FormattedRelative value={post.postedAt}/>
+                <Components.Icon name="time" /> <FormattedRelative value={post.postedAt}/>
               </span>
+            </div>
+            <div className="stats">
+              <Components.Vote collection={Posts} document={post} currentUser={this.props.currentUser}/>
             </div>
             <div className="stats">
               <Link to={Posts.getPageUrl(post)} className="btn btn-sm">
                 <Components.Icon name="comment" /> {post.commentCount}
               </Link>
             </div>
-            <div className="stats">
-              <Components.Vote collection={Posts} document={post} currentUser={this.props.currentUser}/>
-            </div>
-            
-            {this.props.currentUser && this.props.currentUser.isAdmin ? <Components.PostsStats post={post} /> : null}
-            {Posts.options.mutations.edit.check(this.props.currentUser, post) ? this.renderActions() : null}
-
           </div>
 
+          <h3 className="card-title">
+            <Link to={Posts.getLink(post)} target={Posts.getLinkTarget(post)}>
+              {post.title}
+            </Link>
+            {Posts.options.mutations.edit.check(this.props.currentUser, post) ? this.renderActions() : null}
+          </h3>
+
+          {this.renderCategories()}
+
+          <div className="card-excerpt">
+            {post.excerpt}
+          </div>
+
+          <div className="card-footer">
+            {post.user? <div className="author"><Components.UsersAvatar user={post.user} size="small"/> <strong><Components.UsersName user={post.user}/></strong></div> : null}
+            {this.props.currentUser && this.props.currentUser.isAdmin ? <Components.PostsStats post={post} /> : null}
+          </div>
         </div>
+
       </div>
     )
   }

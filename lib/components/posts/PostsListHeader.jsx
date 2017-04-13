@@ -5,14 +5,20 @@ const BootPostsListHeader = () => {
 
   return (
     <div>
-      <h3 className="card-title">Search</h3>
-      <Components.SearchForm/>
-
-      <h3 className="card-title">Categories</h3>
-      <Components.CategoriesList/>
+      <div className="margin-b">
+        <h3 className="card-title">Search</h3>
+        <Components.SearchForm/>
+      </div>
       
-      <h3 className="card-title">Views</h3>
-      <Components.PostsViews/>
+      <div className="margin-b">
+        <h3 className="card-title">Categories</h3>
+        <Components.CategoriesList/>
+      </div>
+
+      <div className="margin-b">
+        <h3 className="card-title">Views</h3>
+        <Components.PostsViews/>
+      </div>
     </div>
   )
 }

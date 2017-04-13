@@ -71,6 +71,18 @@ a {
   margin: 0 !important;
 }
 
+.margin-b-sm {
+  margin-bottom: $padding-base / 2;
+}
+
+.margin-b-md {
+  margin-bottom: $padding-base;
+}
+
+.margin-b {
+  margin-bottom: $padding-base * 1.5;
+}
+
 .footer {
   position: relative;
   z-index: 2;
@@ -125,7 +137,6 @@ a {
 
 .sidebar {
   .dropdown {
-    margin: 0 0 $padding-base;
     width: 100%;
 
     .btn-default {

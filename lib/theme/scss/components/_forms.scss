@@ -42,7 +42,6 @@ textarea {
   box-shadow: none;
   outline: none;
   height: $input-height;
-  margin: 0 0 $padding-base * 1.5;
   width: 100%;
   font-size: $input-font-size;
   font-weight: 400;
@@ -114,6 +113,7 @@ textarea {
     .btn-twitter, .btn-facebook, .btn-google {
       font-size: 0;
       padding: 0 $padding-base / 2;
+      width: 60px;
 
       &:after {
         content: "\f099";
@@ -129,7 +129,7 @@ textarea {
       border-color: #3b5998;
 
       &:after {
-        content: "\f099";
+        content: "\f09a";
       }
     }
     .btn-google {
@@ -137,7 +137,7 @@ textarea {
       color: $white-color;
 
       &:after {
-        content: "\f099";
+        content: "\f0d5";
       }
     }
   }
