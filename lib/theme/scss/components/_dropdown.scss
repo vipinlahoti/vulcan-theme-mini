@@ -35,7 +35,9 @@
     &.active {
       a {
         background: $gray-light;
+        color: inherit;
       }
     }
   }
 }
+

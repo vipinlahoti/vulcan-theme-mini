@@ -1,4 +1,4 @@
-import { Components, getRawComponent, registerComponent, withList, withCurrentUser } from 'meteor/vulcan:core';
+import { Components, getRawComponent, replaceComponent, withList, withCurrentUser } from 'meteor/vulcan:core';
 import React from 'react';
 import Posts from 'meteor/vulcan:posts';
 import { Alert } from 'react-bootstrap';
@@ -101,4 +101,4 @@ const options = {
   fragmentName: 'PostsList',
 };
 
-registerComponent('PostsList', BootPostsList, withCurrentUser, [withList, options]);
+replaceComponent('PostsList', BootPostsList, withCurrentUser, [withList, options]);

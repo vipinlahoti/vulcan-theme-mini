@@ -13,13 +13,12 @@ const BootUsersEditForm = (props, context) => {
         <Grid>
           <Row>
             <Col md={8}>
-              <h1 className="title"><FormattedMessage id="users.edit_account"/></h1>
-              <h5>Meet the amazing team behind this project and find out more about how we work.</h5>
+              <h2 className="title"><FormattedMessage id="users.edit_account"/></h2>
             </Col>
           </Row>
         </Grid>
       </Jumbotron>
-      <div className="main z-depth-2">
+      <div className="main">
         <Grid>
           <Row>
             <Col md={8} mdOffset={2}>

@@ -18,16 +18,17 @@
   background: $primary-color;
   border-radius: $border-base $border-base 0 0;
   padding: $padding-base $padding-base * 2;
-  margin-bottom: $padding-base * 2;
-}
-// Close icon
-.modal-header .close {
-  margin-top: -2px;
-  position: absolute;
-  background: transparent;
-  right: -6rem;
-  box-shadow: none;
-  font-size: 3rem;
+  
+  .close {
+    color: $white-color;
+    margin-top: -2px;
+    position: absolute;
+    background: transparent;
+    right: -5rem;
+    box-shadow: none;
+    font-size: 3rem;
+    opacity: 1;
+  }
 }
 
 // Title text within header

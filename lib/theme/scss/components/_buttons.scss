@@ -1,7 +1,7 @@
 .btn, button {
   border: $button-border;
   display: inline-block;
-  height: $button-height;
+  // height: $button-height;
   line-height: $button-height;
   outline: 0;
   margin: 0 $padding-base / 5;
@@ -55,11 +55,6 @@ button, .btn, .btn-large {
   }
 }
 
-// Raised Button
-button, .btn {
-  
-}
-
 // Large button
 .btn-large {
   @extend .btn;
@@ -82,11 +77,6 @@ button, .btn {
     font-size: inherit;
   }
 }
-
-.btn-signup {
-  margin-left: $padding-base / 1.5;
-}
-
 
 .btn-primary, .btn-primary.active {
   background: $primary-color;

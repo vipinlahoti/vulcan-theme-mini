@@ -4,6 +4,7 @@ import { FormattedMessage, FormattedRelative } from 'react-intl';
 import { Link } from 'react-router';
 import Posts from "meteor/vulcan:posts";
 
+
 class BootPostsItem extends getRawComponent('PostsItem') {
 
   renderActions() {

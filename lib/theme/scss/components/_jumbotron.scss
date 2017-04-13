@@ -1,6 +1,6 @@
 .jumbotron {
   background-size: cover;
-  height: 75vh;
+  height: 45vh;
   position: relative;
 
   p {
@@ -11,7 +11,7 @@
     z-index: 2;
     position: relative;
     color: $white-color;
-    padding-top: 25vh;
+    padding-top: 10vh;
   }
 
   &:before, &:after {

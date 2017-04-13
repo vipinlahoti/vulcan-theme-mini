@@ -120,6 +120,7 @@
 
   a {
     color: $black-color;
+    margin-right: $padding-base / 2;
   }
 }
 
@@ -127,7 +128,6 @@
   display: inline-block;
 
   .btn-sm {
-    margin-left: $padding-base;
     color: $white-color;
     font-size: 12px;
     background: $black-color;

@@ -55,6 +55,13 @@ textarea {
   }
 }
 
+.radio, .checkbox {
+  margin: 0;
+}
+
+.form-section {
+  margin: $padding-base / 2 0 $padding-base;
+}
 
 .newsletter-card {
   input[type=text] {
