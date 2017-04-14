@@ -35,7 +35,8 @@ input[type=tel],
 input[type=number],
 input[type=search],
 input[type=file],
-textarea {
+textarea,
+.form-control {
   background-color: $white-color;
   border: 1px solid $gray-light;
   border-radius: $border-small;

@@ -33,7 +33,7 @@
     }
 
     &.active {
-      a {
+      a, a:hover {
         background: $gray-light;
         color: inherit;
       }

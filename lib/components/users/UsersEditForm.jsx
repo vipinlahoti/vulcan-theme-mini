@@ -9,15 +9,6 @@ const BootUsersEditForm = (props, context) => {
 
   return (
     <div>
-      <Jumbotron>
-        <Grid>
-          <Row>
-            <Col md={8}>
-              <h2 className="title"><FormattedMessage id="users.edit_account"/></h2>
-            </Col>
-          </Row>
-        </Grid>
-      </Jumbotron>
       <div className="main">
         <Grid>
           <Row>

@@ -1,5 +1,6 @@
 import { Components, replaceComponent } from 'meteor/vulcan:core';
 import React, { PropTypes, Component } from 'react';
+import { Grid } from 'react-bootstrap';
 
 class BootLayout extends Component {
 
@@ -9,7 +10,9 @@ class BootLayout extends Component {
         <Components.HeadTags />
         <Components.UsersProfileCheck {...this.props} />
         <Components.Header {...this.props}/>
-        <Components.FlashMessages />
+        <Grid>
+          <Components.FlashMessages />
+        </Grid>
         
         {this.props.children}
         <Components.Footer {...this.props}/>

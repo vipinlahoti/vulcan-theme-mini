@@ -32,18 +32,10 @@
   }
 }
 
-// Media list variation
-//
-// Undo default ul/ol styles
-.media-list {
-  padding-left: 0;
-  list-style: none;
-}
-
-
 .avatar {
   border-radius: $border-circle;
   box-shadow: $navbar-shadow;
+  display: inline-block;
 }
 
 .media-footer {

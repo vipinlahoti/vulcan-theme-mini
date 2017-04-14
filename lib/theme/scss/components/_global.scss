@@ -16,7 +16,6 @@ body {
   margin: 0;
 }
 
-
 ul, nav {
   &.browser-default,
   &.browser-default li {
@@ -176,5 +175,9 @@ a {
 }
 
 .posts-stats {
+  margin: $padding-base 0;
+}
+
+.alert {
   margin: $padding-base 0;
 }
