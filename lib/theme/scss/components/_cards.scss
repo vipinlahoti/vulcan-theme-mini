@@ -1,6 +1,6 @@
 .card-columns {
   column-count: 2;
-  column-gap: $padding-base * 1.5;
+  column-gap: $padding-base * 2.5;
 }
 
 .card {
@@ -11,7 +11,7 @@
   position: relative;
   margin: $padding-base $padding-base / 2;
   transition: box-shadow .25s;
-  width: calc(100% - 1rem);
+  width: 100%;
 
   .card-image {
     background: $white-color;
@@ -120,11 +120,19 @@
 
   a {
     color: $black-color;
+    margin-right: $padding-base / 2;
   }
 }
 
 .card-admin {
   display: inline-block;
+
+  .btn-sm {
+    color: $white-color;
+    font-size: 12px;
+    background: $black-color;
+    padding: $padding-base / 6 $padding-base / 2;
+  }
 }
 
 .posts-categories {
@@ -136,12 +144,5 @@
     border-radius: $border-small;
     font-size: 12px;
     margin-right: $padding-base / 2;
-  }
-}
-
-@media (max-width: 767px) {
-  .card-columns {
-    column-count: 1;
-    column-gap: $padding-base;
   }
 }

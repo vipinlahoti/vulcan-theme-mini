@@ -3,7 +3,6 @@ import React, { PropTypes, Component } from 'react';
 import { FormattedMessage, FormattedRelative } from 'react-intl';
 import { Link } from 'react-router';
 import Posts from "meteor/vulcan:posts";
-import { Button } from 'react-bootstrap';
 
 
 class BootPostsItem extends getRawComponent('PostsItem') {
@@ -11,7 +10,7 @@ class BootPostsItem extends getRawComponent('PostsItem') {
   renderActions() {
     return (
       <div className="card-admin">
-        <ModalTrigger title="Edit Post" component={<Button bsSize="small" className="btn-dark"><Components.Icon name="edit" /> <FormattedMessage id="posts.edit"/></Button>}>
+        <ModalTrigger title="Edit Post" component={<a className="btn btn-sm"><Components.Icon name="edit" /> <FormattedMessage id="posts.edit"/></a>}>
           <Components.PostsEditForm post={this.props.post} />
         </ModalTrigger>
       </div>

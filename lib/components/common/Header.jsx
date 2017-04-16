@@ -1,6 +1,6 @@
 import React from 'react';
 import { withCurrentUser, getSetting, Components, replaceComponent } from 'meteor/vulcan:core';
-import { Button, Navbar, Nav, NavItem } from 'react-bootstrap';
+import { Button, Navbar, Nav } from 'react-bootstrap';
 
 const BootHeader = (props, context) => {
   
@@ -16,24 +16,16 @@ const BootHeader = (props, context) => {
           <Components.Logo logoUrl={logoUrl} siteTitle={siteTitle} />
           {tagline ? <h2 className="tagline">{tagline}</h2> : "" }
         </Navbar.Brand>
-        <Navbar.Toggle />
-      </Navbar.Header>  
-      <Navbar.Collapse>
+      </Navbar.Header>
+      <Nav pullRight>
         {!!props.currentUser ?
-          <Nav pullRight>
-            <NavItem eventKey={4}>
-              <Components.PostsNewButton/>
-            </NavItem>
-            <Components.UsersMenu/>
-          </Nav>
-          :
-          <Nav pullRight>
-            <Components.ModalTrigger size="small" component={button}>
-              <Components.AccountsLoginForm />
-            </Components.ModalTrigger>
-          </Nav>
+          <Components.UsersMenu/>
+        :
+          <Components.ModalTrigger size="small" component={button}>
+            <Components.AccountsLoginForm />
+          </Components.ModalTrigger>          
         }
-      </Navbar.Collapse>
+      </Nav>
     </Navbar>
   )
 }

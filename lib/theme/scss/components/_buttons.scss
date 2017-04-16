@@ -1,7 +1,7 @@
 .btn, button {
   border: $button-border;
   display: inline-block;
-  height: $button-height;
+  // height: $button-height;
   line-height: $button-height;
   outline: 0;
   margin: 0 $padding-base / 5;
@@ -68,10 +68,10 @@ button, .btn, .btn-large {
 
 // Small button
 .btn-sm {
-  font-size: 12px;
-  height: 24px;
-  line-height: 24px;
-  padding: 0 $padding-base / 2;
+  font-size: 1rem;
+  height: inherit;
+  line-height: inherit;
+  padding: $padding-base / 3 $padding-base;
 
   i {
     font-size: inherit;
@@ -86,11 +86,6 @@ button, .btn, .btn-large {
   }
 }
 
-.btn-dark {
-  background: $black-color;
-  color: $white-color;
-  margin-left: $padding-base / 2;
-}
 
 .btn-twitter:after {
   text-indent: 9999;

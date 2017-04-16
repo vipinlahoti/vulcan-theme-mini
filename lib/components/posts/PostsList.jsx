@@ -18,33 +18,63 @@ const BootPostsList = (props) => {
 
     return (
       <div>
-        <div className="card-columns posts-list">
-          {error ? <Error error={error} /> : null }
-          {results.map(post => <Components.PostsItem post={post} key={post._id} currentUser={currentUser} terms={terms} />)}
-          {hasMore ? (loadingMore ? <Components.PostsLoading/> : <Components.PostsLoadMore loadMore={loadMore} count={count} totalCount={totalCount} />) : null }
-        </div>
+        <Row>
+          <Col md={9}>
+            <div className="card-columns posts-list">
+              {error ? <Error error={error} /> : null }
+              {results.map(post => <Components.PostsItem post={post} key={post._id} currentUser={currentUser} terms={terms} />)}
+              {hasMore ? (loadingMore ? <Components.PostsLoading/> : <Components.PostsLoadMore loadMore={loadMore} count={count} totalCount={totalCount} />) : null }
+            </div>
+          </Col>
+          <Col md={3}>
+            <div className="sidebar">
+              {showHeader ? <Components.PostsListHeader/> : null}
+              <Components.Newsletter />
+            </div>
+          </Col>
+        </Row>
       </div>
     )
   } else if (loading) {
     return (
       <div>
-        <div className="card-columns posts-list">
-          {error ? <Error error={error} /> : null }
-          <div className="posts-list-content">
-            <Components.PostsLoading/>
-          </div>
-        </div>
+        <Row>
+          <Col md={9}>
+            <div className="card-columns posts-list">
+              {error ? <Error error={error} /> : null }
+              <div className="posts-list-content">
+                <Components.PostsLoading/>
+              </div>
+            </div>
+          </Col>
+          <Col md={3}>
+            <div className="sidebar">
+              {showHeader ? <Components.PostsListHeader/> : null}
+              <Components.Newsletter />
+            </div>
+          </Col>
+        </Row>
       </div>
     )
   } else {
     return (
       <div>
-        <div className="card-columns posts-list">
-          {error ? <Error error={error} /> : null }
-          <div className="posts-list-content">
-            <Components.PostsNoResults/>
-          </div>
-        </div>
+        <Row>
+          <Col md={9}>
+            <div className="card-columns posts-list">
+              {error ? <Error error={error} /> : null }
+              <div className="posts-list-content">
+                <Components.PostsNoResults/>
+              </div>
+            </div>
+          </Col>
+          <Col md={3}>
+            <div className="sidebar">
+              {showHeader ? <Components.PostsListHeader/> : null}
+              <Components.Newsletter />
+            </div>
+          </Col>
+        </Row>
       </div>
     )  
   }

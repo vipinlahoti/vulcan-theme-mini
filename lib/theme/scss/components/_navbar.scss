@@ -18,16 +18,10 @@ nav {
     box-shadow: $navbar-shadow;
     position: relative;
     z-index: 99;
-
-    li {
-      a {
-        padding: $padding-base / 3 $padding-base;
-      }
-    }
   }
 
   .navbar-brand {
-    padding: $padding-base / 2 $padding-base;
+    padding: 0;
   }
 
   // Logo
@@ -41,14 +35,6 @@ nav {
 
     &:hover {
       text-decoration: none;
-    }
-  }
-
-  .dropdown {
-    .dropdown-toggle {
-      margin: 0;
-      padding: 0 $padding-base;
-      background: transparent;
     }
   }
 }
